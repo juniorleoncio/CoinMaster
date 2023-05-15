@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CoinRowView: View {
+    let coin: Coin
     var body: some View {
         HStack {
             // rank coin
-            Text("1")
+            Text("\(coin.marketCapRank)")
                 .font(.caption)
                 .foregroundColor(.gray)
             
             // image
-            Image(systemName: "bitcoinsign.circle.fill")
+            KFImage(URL(string: coin.image))
                 .resizable()
                 .scaledToFit()
                 .frame(width: 32, height: 32)
@@ -24,12 +26,12 @@ struct CoinRowView: View {
             
             // coin name info
             VStack(alignment: .leading, spacing: 4) {
-                Text("Bitcoin")
+                Text(coin.name)
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .padding(.leading, 4)
                 
-                Text("BTC")
+                Text(coin.symbol.uppercased())
                     .font(.caption)
                     .padding(.leading, 6)
             }
@@ -39,15 +41,15 @@ struct CoinRowView: View {
             
             // coin price info
             VStack(alignment: .trailing, spacing: 4) {
-                Text("$22.330.10")
+                Text(coin.currentPrice.toCurrency())
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .padding(.leading, 4)
                 
-                Text("- 5.60%")
+                Text(coin.priceChangePercentage24H.toPercentString())
                     .font(.caption)
                     .padding(.leading, 6)
-                    .foregroundColor(.red)
+                    .foregroundColor(coin.priceChangePercentage24H > 0 ? .green : .red)
             }
             .padding(.leading, 2)
         }
@@ -56,8 +58,8 @@ struct CoinRowView: View {
     }
 }
 
-struct CoinRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        CoinRowView()
-    }
-}
+//struct CoinRowView_Previews: PreviewProvider {
+ //   static var previews: some View {
+   //     CoinRowView(coin: coin)
+   // }
+//}
