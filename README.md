@@ -1,4 +1,7 @@
 <h1>Coin Master</h1>
+
+<img src="https://github.com/juniorleoncio/CoinMaster/assets/15078540/fae331b5-eba5-48bc-8270-0b00d4272e43" width="1080px" />
+
 <p>CoinMaster é um aplicativo iOS que permite ao usuário visualizar as cotações em tempo real de criptomoedas, utilizando as APIs disponíveis no mercado.</p>
 <h2>Tecnologias utilizadas</h2>
 <ul>
