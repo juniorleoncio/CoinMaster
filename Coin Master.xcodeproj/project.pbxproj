@@ -73,7 +73,6 @@
 				D8BB06EC2A126C710047BD94 /* Core */,
 				D8BB06EB2A126C650047BD94 /* Models */,
 				D8BB06EA2A126C470047BD94 /* Extensions */,
-				D8BB06E92A126C330047BD94 /* Utils */,
 				D8BB06DD2A1198090047BD94 /* ContentView.swift */,
 				D8BB06DF2A11980D0047BD94 /* Assets.xcassets */,
 				D8BB06E12A11980D0047BD94 /* Preview Content */,
@@ -87,13 +86,6 @@
 				D8BB06E22A11980D0047BD94 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		D8BB06E92A126C330047BD94 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		D8BB06EA2A126C470047BD94 /* Extensions */ = {
